@@ -94,6 +94,9 @@ class ResultContainer extends React.Component {
           <PlayAgainButton onClick={playAgain}>
             Take The Quiz Again!
           </PlayAgainButton>
+          <p>
+          <a href = "https://github.com/scottcarol/react-quiz/tree/master" target="_blank">Check out the GitHub repo</a>
+          </p>
         </div>
       </div>
     );
