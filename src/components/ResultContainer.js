@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Header from "./Header";
 
 import Summary from "./Summary";
 import Detail from "./Detail";
@@ -72,15 +73,18 @@ class ResultContainer extends React.Component {
     return (
       <div>
         <Summary summaryText={summaryText} />
-        {finalResult.map(function(type, index) {
+        {finalResult.map(function(type) {
           const resultDetail = resultDescriptions.find(function(element) {
             return element.type === type;
           });
           return (
-            <DetailBox>
+            <DetailBox
+              key={Math.random()
+                .toString(36)
+                .substring(7)}
+            >
               <Detail
                 percent={percent}
-                key={index}
                 resultDetail={resultDetail}
                 type={type}
               />

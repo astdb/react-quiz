@@ -99,7 +99,8 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        {this.state.quizComplete ? this.renderResult() : this.renderQuiz()}
+        {this.state.quizComplete && this.renderResult()}
+        {!this.state.quizComplete && this.renderQuiz()}
       </div>
     );
   }

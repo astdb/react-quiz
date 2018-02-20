@@ -4,7 +4,7 @@ import styled from "styled-components";
 const HeaderStyle = styled.h1`
   color: black;
   cursor: pointer;
-  font-family: "Pacifico", cursive !important;
+  font-family: "Pacifico", cursive;
 `;
 
 class Header extends React.Component {
