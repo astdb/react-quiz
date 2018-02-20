@@ -1,41 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Header from "./Header";
 
 import Summary from "./Summary";
 import Detail from "./Detail";
-
-const PlayAgainButton = styled.button`
-  background: #c0c0c0;
-  font-size: 1em;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-  padding: 1em;
-  border: 2px solid black;
-  border-radius: 3px;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background: lightgray;
-    box-shadow: 1px 1px 2px black, 0 0 10px silver, 0 0 2px darkgray;
-  }
-
-  &:focus {
-    background: lightgray;
-  }
-`;
-
-const DetailBox = styled.div`
-  border: 2px solid black !important;
-  padding: 0.2em !important;
-  width: 61.8% !important;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-`;
 
 class ResultContainer extends React.Component {
   constructor(props) {
@@ -69,6 +37,37 @@ class ResultContainer extends React.Component {
     const percent = this.calculatePercent();
     const summaryText = this.interpretResult(finalResult);
     const resultDescriptions = this.state.resultDescriptions;
+
+    const PlayAgainButton = styled.button`
+      background: #c0c0c0;
+      font-size: 1em;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1em;
+      padding: 1em;
+      border: 2px solid black;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background: lightgray;
+        box-shadow: 1px 1px 2px black, 0 0 10px silver, 0 0 2px darkgray;
+      }
+
+      &:focus {
+        background: lightgray;
+      }
+    `;
+
+    const DetailBox = styled.div`
+      border: 2px solid black !important;
+      padding: 0.2em !important;
+      width: 61.8% !important;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+    `;
 
     return (
       <div>
